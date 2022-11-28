@@ -31,12 +31,21 @@
                   <li><a class="dropdown-item" href="visi-misi.php">Visi Misi Desa</a></li>
                 </ul>
               </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Kegiatan RW
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li class="nav-item">
+                    <a class="dropdown-item" href="ronda.php">Ronda</a>
+                  </li>
+                </ul>
+              </li>
               <li class="nav-item">
                 <a class="nav-link" href="galeri-kegiatan.php">Galeri Kegiatan</a>
               </li>
               <li class="nav-item">
                 <a href="gor.php" class="nav-link">GOR</a>
-              </a>
               </li>
             </ul>
             <a href="master/login.php" class="btn btn-outline-white">Login</a>

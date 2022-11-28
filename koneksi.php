@@ -7,4 +7,8 @@ $user = "root";
 $pass = "";
 $database = "db_warga_bonsar";
 
-$db = mysqli_connect($host, $user, $pass, $database) or die("gagal koneksi ke database");
+$db = new mysqli($host, $user, $pass, $database);
+
+if (!$db) {
+    die("Koneksi gagal ke database. ". $db->error);
+}

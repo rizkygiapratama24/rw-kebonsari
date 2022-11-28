@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 25, 2022 at 05:40 AM
+-- Generation Time: Nov 28, 2022 at 02:02 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 7.4.33
 
@@ -73,6 +73,27 @@ CREATE TABLE `keluarga` (
 
 INSERT INTO `keluarga` (`id_keluarga`, `id_warga`, `no_kk`, `alamat_keluarga`, `desa_kelurahan_keluarga`, `kecamatan_keluarga`, `kabupaten_kota_keluarga`, `provinsi_keluarga`, `negara_keluarga`, `rt_keluarga`, `rw_keluarga`, `kode_pos_keluarga`, `created_at`, `updated_at`) VALUES
 (3, 15, '0531602200400002	', 'Kebonsari', 'Baros', 'Cimahi Tengah', 'Cimahi', 'Jawa Barat', 'Indonesia', '001', '06', '4040', '2022-11-23 16:10:01', '2022-11-23 16:10:01');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `schedule_list`
+--
+
+CREATE TABLE `schedule_list` (
+  `id` int(30) NOT NULL,
+  `title` text NOT NULL,
+  `description` text NOT NULL,
+  `start_datetime` datetime NOT NULL,
+  `end_datetime` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `schedule_list`
+--
+
+INSERT INTO `schedule_list` (`id`, `title`, `description`, `start_datetime`, `end_datetime`) VALUES
+(6, 'Ronda 1', 'Ronda 1', '2022-11-28 01:09:00', '2022-11-28 04:10:00');
 
 -- --------------------------------------------------------
 
@@ -157,6 +178,12 @@ ALTER TABLE `keluarga`
   ADD KEY `id_penduduk` (`id_warga`);
 
 --
+-- Indexes for table `schedule_list`
+--
+ALTER TABLE `schedule_list`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `user`
 --
 ALTER TABLE `user`
@@ -183,6 +210,12 @@ ALTER TABLE `anggota_keluarga`
 --
 ALTER TABLE `keluarga`
   MODIFY `id_keluarga` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `schedule_list`
+--
+ALTER TABLE `schedule_list`
+  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `user`

@@ -16,6 +16,16 @@
         <li>
             <a href="<?php echo $hest; ?>/kartu-keluarga/" class="nav-link px-0"> <span class="d-none d-sm-inline">Data Kartu Keluarga</a>
         </li>
+        <li>
+            <a href="#collapseExample" class="nav-link px-0" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseExample">Kegiatan RW</a>
+            <div class="collapse" id="collapseExample">
+                <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-sm-start nav-sidebar">
+                    <li>
+                        <a href="<?php echo $hest; ?>/kegiatan-ronda/" class="nav-link px-2"> <span class="d-none d-sm-inline">Kegiatan Ronda</span> </a>
+                    </li>
+                </ul>
+            </div>
+        </li>
     </ul>
     <hr>
     <div class="dropdown dropdown-custom-sidebar pb-4">
