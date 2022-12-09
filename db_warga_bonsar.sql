@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 29, 2022 at 07:06 AM
+-- Generation Time: Dec 09, 2022 at 02:39 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 7.4.33
 
@@ -46,6 +46,7 @@ CREATE TABLE `identitas_kp` (
   `id_identitas_kp` int(11) NOT NULL,
   `id_warga` int(11) NOT NULL,
   `nama_kp` varchar(255) NOT NULL,
+  `alamat_kp` text NOT NULL,
   `kode_pos_kp` varchar(50) NOT NULL,
   `email_kp` varchar(50) NOT NULL,
   `no_tlp_kp` varchar(50) NOT NULL,
@@ -64,8 +65,8 @@ CREATE TABLE `identitas_kp` (
 -- Dumping data for table `identitas_kp`
 --
 
-INSERT INTO `identitas_kp` (`id_identitas_kp`, `id_warga`, `nama_kp`, `kode_pos_kp`, `email_kp`, `no_tlp_kp`, `rw_kp`, `kelurahan_kp`, `kecamatan_kp`, `kota_kp`, `provinsi_kp`, `foto_kp`, `logo_kp`, `created_at`, `updated_at`) VALUES
-(1, 17, 'Kebonsari', '45582', 'satriafauji5@gmail.com', '123456789', '06', 'Baros', 'Cimahi Tengah', 'Cimahi', 'Jawa Barat', 'bg.jpeg', 'kotacimahi.png', '2022-11-28 14:27:49', '2022-11-28 14:22:42');
+INSERT INTO `identitas_kp` (`id_identitas_kp`, `id_warga`, `nama_kp`, `alamat_kp`, `kode_pos_kp`, `email_kp`, `no_tlp_kp`, `rw_kp`, `kelurahan_kp`, `kecamatan_kp`, `kota_kp`, `provinsi_kp`, `foto_kp`, `logo_kp`, `created_at`, `updated_at`) VALUES
+(1, 17, 'Kebonsari', 'Jln. Kebonsari No. 5 RT 03', '45582', 'satriafauzi@gmail.com', '089463463', '06', 'Baros', 'Cimahi Tengah', 'Cimahi', 'Jawa Barat', 'bg.jpeg', 'kotacimahi.png', '2022-12-02 14:56:39', '2022-11-28 14:22:42');
 
 -- --------------------------------------------------------
 
@@ -103,6 +104,14 @@ CREATE TABLE `schedule_list` (
   `start_datetime` datetime NOT NULL,
   `end_datetime` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `schedule_list`
+--
+
+INSERT INTO `schedule_list` (`id`, `title`, `description`, `start_datetime`, `end_datetime`) VALUES
+(7, 'Ronda 1', 'adi,ridwan,maman', '2022-11-29 15:12:00', '2022-11-29 16:12:00'),
+(9, 'Ronda 2', 'rww', '2022-11-30 22:04:00', '2022-11-30 22:05:00');
 
 -- --------------------------------------------------------
 
@@ -164,7 +173,8 @@ CREATE TABLE `warga` (
 --
 
 INSERT INTO `warga` (`id_warga`, `nik_warga`, `nama_warga`, `tempat_lahir_warga`, `tanggal_lahir_warga`, `jenis_kelamin_warga`, `alamat_ktp_warga`, `alamat_warga`, `desa_kelurahan_warga`, `kecamatan_warga`, `kabupaten_kota_warga`, `provinsi_warga`, `negara_warga`, `rt_warga`, `rw_warga`, `agama_warga`, `pendidikan_terakhir_warga`, `pekerjaan_warga`, `status_perkawinan_warga`, `status_warga`, `created_at`, `updated_at`) VALUES
-(17, '063634634645', 'Ahmad ', 'Surabaya', '1972-09-02', 'L', 'Kebon Sari', 'Kebon Sari', 'Baros', 'Cimahi Tengah', 'Cimahi', 'Jawa Barat', 'Indonesia', '001', '006', 'Islam', 'S1', 'Pegawai Swasta', 'Kawin', 'Tetap', '2022-11-28 14:20:44', '2022-11-28 14:20:44');
+(17, '063634634645', 'Ahmad ', 'Surabaya', '1972-09-02', 'L', 'Kebon Sari', 'Kebon Sari', 'Baros', 'Cimahi Tengah', 'Cimahi', 'Jawa Barat', 'Indonesia', '001', '006', 'Islam', 'S1', 'Pegawai Swasta', 'Kawin', 'Tetap', '2022-11-28 14:20:44', '2022-11-28 14:20:44'),
+(18, '094634654754', 'Maman ', 'Bandung', '1978-09-02', 'L', 'Cilengkrang', 'Kebonsari', 'Baros', 'Cimahi Tengah', 'Cimahi', 'Jawa Barat', 'Indonesia', '002', '006', 'Islam', 'D3', 'Pegawai Swasta', 'Kawin', 'Tetap', '2022-11-29 15:45:46', '2022-11-29 15:45:46');
 
 --
 -- Indexes for dumped tables
@@ -236,7 +246,7 @@ ALTER TABLE `keluarga`
 -- AUTO_INCREMENT for table `schedule_list`
 --
 ALTER TABLE `schedule_list`
-  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `user`
@@ -248,7 +258,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `warga`
 --
 ALTER TABLE `warga`
-  MODIFY `id_warga` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id_warga` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- Constraints for dumped tables

@@ -1,9 +1,29 @@
+a {
+    text-decoration: none;
+}
+
 table.dataTable.table-striped>tbody>tr.odd>* {
     vertical-align:middle;
 }
 
-.nav-sidebar a {
+.sidebar-brand {
+    display: block;
+    padding: 0.575rem;
+}
+
+.sidebar-link, a.sidebar-link {
     color: #fff;
+    cursor: pointer;
+    display: block;
+    font-weight: 400;
+    padding: 0.575rem;
+    position: relative;
+    text-decoration: none;
+    transition: color 75ms ease-in-out;
+}
+
+.nav-sidebar-sub a {
+    font-size: 14px;
 }
 
 .nav-sidebar a:hover {
@@ -51,4 +71,30 @@ div.dataTables_wrapper .page-link {
     font-size: 0.8rem;
 }
 
+.bg-identitas {
+    background-repeat: no-repeat !important;
+    background-position: inherit;
+    background-size: cover !important;
+    background-blend-mode: multiply;
+    height: 100%;
+    width: 100%;
+}
 
+.sidebar-link[data-bs-toggle].collapsed::after {
+    font-family: "FontAwesome";
+    content: "\f107";
+    float: right;
+    font-size: 12px;
+}
+
+.sidebar-link[data-bs-toggle]:not(.collapsed)::after {
+    font-family: "FontAwesome";
+    content: "\f106";
+    float: right;
+    font-size: 12px;
+}
+
+.nav-sidebar {
+    list-style: none;
+    padding-left: 0;
+}

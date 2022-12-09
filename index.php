@@ -138,13 +138,14 @@
                 <div class="title-about">
                     <h1 class="text-white">"SELAMAT DATANG DI WEBSITE DESA KAMI!</h1>
                 </div>
-                <div class="desc-about">
-                    <p class="text-white mb-0">
+                <div class="desc-about text-white">
+                    <p>
                         Kami senang anda sudah berkunjung, Semoga melalui situs web ini kami dapat
                         memberikan segala informasi yang aktual dan terpengaruhi langsung dari desa kami. 
                         Situs web ini merupakan salah satu wujud dari komitmen pemerintah desa, pada komunikasi
                         dan transparasi publik.
                     </p>
+                    <strong>Ade Firman</strong>, <span>Ketua RW 06 Kebonsari</span>
                 </div>
             </div>
         </div>

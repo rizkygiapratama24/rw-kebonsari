@@ -6,7 +6,7 @@ if(!isset($_GET['id'])){
     exit;
 }
 
-$delete = $db->query("DELETE FROM `schedule_list` where id = '{$_GET['id']}'");
+$delete = $db->query("DELETE FROM schedule_list where id = '{$_GET['id']}'");
 if($delete){
     echo "<script> alert('Jadwal Ronda Berhasil Dihapus'); location.replace('./') </script>";
 }else{

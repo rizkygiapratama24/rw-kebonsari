@@ -2,26 +2,76 @@
     $host = $_SERVER['HTTP_HOST'];
     $hest = "http://".$host."/rw-kebonsari/master";
 ?>
-<div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
-    <a href="#" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+<div class="text-white min-vh-100">
+    <a href="#" class="sidebar-brand text-white text-decoration-none">
         <span class="fs-5 d-none d-sm-inline">Menu</span>
     </a>
-    <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start nav-sidebar" id="menu">
+    <ul class="nav-sidebar" id="menu">
+        
         <li>
-            <a href="<?php echo $hest; ?>/dashboard/" class="nav-link px-0"> <span class="d-none d-sm-inline">Dashboard </a>
+            <a href="<?php echo $hest; ?>/dashboard/" class="sidebar-link"> <span class="d-none d-sm-inline">Dashboard </a>
         </li>
+
         <li>
-            <a href="<?php echo $hest; ?>/warga/" class="nav-link px-0"> <span class="d-none d-sm-inline">Data Warga</a>
-        </li>
-        <li>
-            <a href="<?php echo $hest; ?>/kartu-keluarga/" class="nav-link px-0"> <span class="d-none d-sm-inline">Data Kartu Keluarga</a>
-        </li>
-        <li>
-            <a href="#collapseExample" class="nav-link px-0" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseExample">Kegiatan RW</a>
+            <a href="#collapseExample" class="sidebar-link collapsed" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseExample">Info KP</a>
             <div class="collapse" id="collapseExample">
-                <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-sm-start nav-sidebar">
+                <ul class="nav-sidebar nav-sidebar-sub">
                     <li>
-                        <a href="<?php echo $hest; ?>/kegiatan-ronda/" class="nav-link px-2"> <span class="d-none d-sm-inline">Kegiatan Ronda</span> </a>
+                        <a href="<?php echo $hest; ?>/identitas-kp/" class="sidebar-link"> <span class="d-none d-sm-inline">Identitas KP</span> </a>
+                    </li>
+                    <li>
+                        <a href="#!" class="sidebar-link"> <span class="d-none d-sm-inline">Media Sosial</span> </a>
+                    </li>
+                    <li>
+                        <a href="#!" class="sidebar-link"> <span class="d-none d-sm-inline">Sambutan Ketua RW</span> </a>
+                    </li>
+                    <li>
+                        <a href="#!" class="sidebar-link"> <span class="d-none d-sm-inline">Kabar Desa</span> </a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+
+        <li>
+            <a href="#collapseExample1" class="sidebar-link collapsed" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseExample1">Kegiatan RW</a>
+            <div class="collapse" id="collapseExample1">
+                <ul class="nav-sidebar nav-sidebar-sub">
+                    <li>
+                        <a href="<?php echo $hest; ?>/kegiatan-ronda/" class="sidebar-link"> <span class="d-none d-sm-inline">Kegiatan Ronda</span> </a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+
+        <li>
+            <a href="#collapseExample2" class="sidebar-link collapsed" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseExample2">Kependudukan</a>
+            <div class="collapse" id="collapseExample2">
+                <ul class="nav-sidebar nav-sidebar-sub">
+                    <li>
+                        <a href="<?php echo $hest; ?>/warga/" class="sidebar-link"> <span class="d-none d-sm-inline">Data Warga</a>
+                    </li>
+                    <li>
+                        <a href="<?php echo $hest; ?>/kartu-keluarga/" class="sidebar-link"> <span class="d-none d-sm-inline">Data Kartu Keluarga</a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+
+        <li>
+            <a href="#collapseExample3" class="sidebar-link collapsed" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseExample3">Admin Web</a>
+            <div class="collapse" id="collapseExample3">
+                <ul class="nav-sidebar nav-sidebar-sub">
+                    <li>
+                        <a href="#!" class="sidebar-link"> <span class="d-none d-sm-inline">Artikel</span> </a>
+                    </li>
+                    <li>
+                        <a href="#!" class="sidebar-link"> <span class="d-none d-sm-inline">Galeri</span> </a>
+                    </li>
+                    <li>
+                        <a href="#!" class="sidebar-link"> <span class="d-none d-sm-inline">Menu</span> </a>
+                    </li>
+                    <li>
+                        <a href="#!" class="sidebar-link"> <span class="d-none d-sm-inline">Slider</span> </a>
                     </li>
                 </ul>
             </div>
